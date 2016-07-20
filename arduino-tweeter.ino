@@ -1,7 +1,8 @@
 #include <Twitter.h>
-#include "config.h"
 #include <Ethernet.h>
 #include <dht.h>
+#include "config.h"
+
 #define dht_apin A0
 
 byte mac[] = {
@@ -9,7 +10,8 @@ byte mac[] = {
 };
 
 IPAddress ip(192, 168, 1, 175);
-
+// char apiKey[] = "123456789-abcdefghijklmnopxyz";
+Twitter twitter(apiKey);
 dht DHT;
 
 void setup() {
